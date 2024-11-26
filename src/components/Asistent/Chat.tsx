@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react';
 import './chat.css';
 import ChatWindow from './ChatWindow';
 
-const Chat = ({close}: {close: () => void}) => {
-    const [messages, setMessages] = useState<string[]>([]);
-    const [ws, setWs] = useState<WebSocket | null>(null);
-
+const Chat = ( {close}:{close: any} ) => {
+    const [messages, setMessages] = useState<any[]>([]);
+    const [ws, setWs] = useState(null);
+    
     useEffect(() => {
         const websocket = new WebSocket('ws://mm-ai.eu/ws');
         
@@ -14,17 +14,17 @@ const Chat = ({close}: {close: () => void}) => {
             setMessages((prevMessages) => [...prevMessages, event.data]);
         };
 
-        setWs(websocket);
+        // setWs(websocket);
 
         return () => {
             websocket.close();
         };
     }, []);
 
-    const sendMessage = (message: string) => {
-        if (ws && message) {
-            ws.send(message);
-        }
+    const sendMessage = (message: any) => {
+        // if (ws && message) {
+        //     ws.send(message);
+        // }
     };
 
 

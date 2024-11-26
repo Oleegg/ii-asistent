@@ -5,7 +5,7 @@ import './chat.css';
 // import MessageInput from './MessageInput';
 import minus from './images/minus.svg';
 import x from './images/x.svg';
-import MessageInput from './Input/InputWithButton';
+import MessageInput from './MessageInput';
 
 interface ChatWindowProps {
     messages: string[];
@@ -13,7 +13,7 @@ interface ChatWindowProps {
     onClose: () => void;
 }
 
-const ChatWindow: React.FC<ChatWindowProps> = ({ messages, onSend, onClose }) => {
+const ChatWindow = ({ messages, onSend, onClose }: ChatWindowProps) => {
     const [close, setClose] = useState(false)
     const closeChat = () => {
         setClose(true)
@@ -29,8 +29,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ messages, onSend, onClose }) =>
             </div>
             <div className='chat-content'>
                 <MessageList messages={messages} />
-                {/* <MessageInput onSend={onSend} /> */}
-<MessageInput/>
+                <MessageInput onSend={onSend} />
             </div>
         </div>
     );

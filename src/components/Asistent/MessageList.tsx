@@ -1,11 +1,10 @@
-// src/components/MessageList.tsx
 import React from 'react';
 
 interface MessageListProps {
     messages: string[];
 }
 
-const MessageList: React.FC<MessageListProps> = ({ messages }) => {
+const MessageList = ({ messages }: MessageListProps) => {
     return (
         <ul className="message-list">
             {messages.map((message, index) => (

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './inputWithButton.css'; // импортируем файлы CSS
 
-const MessageInput: React.FC = () => {
+const MessageInput = () => {
     const [inputValue, setInputValue] = useState('');
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e) => {
         setInputValue(e.target.value);
     };
 
@@ -20,7 +20,7 @@ const MessageInput: React.FC = () => {
         }
     };
 
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
             handleSubmit(); // отправляем сообщение при нажатии Enter
         }
@@ -47,7 +47,7 @@ const MessageInput: React.FC = () => {
 };
 
 // Пример функции для отправки сообщения на сервер
-const sendMessageToServer = async (message: string) => {
+const sendMessageToServer = async (message) => {
     // имитация отправки сообщения
     return new Promise((resolve) => {
         setTimeout(() => {

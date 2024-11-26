@@ -1,30 +1,30 @@
 .input-container {
-    width: 100%; /* ширина контейнера 100% */
-    position: relative; /* для позиционирования кнопки */
+    width: 100%;
+    position: relative; 
 }
 
 .input-field {
-    width: 100%; /* поле ввода на всю ширину */
+    width: 100%;
     padding: 10px;
-    box-sizing: border-box; /* счёт ширины и высоты включительно */
+    box-sizing: border-box; 
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 .input-field:focus {
-    border: none; /* убираем рамку по периметру при фокусировке */
-    box-shadow: none; /* убираем тень при фокусировке, если она есть */
+    border: none;
+    box-shadow: none; 
     outline: 1px solid #ccc; 
 }
 
 .submit-button {
-    position: absolute; /* абсолютное позиционирование для кнопки */
-    right: 10px; /* отступ от края справа */
-    top: 50%; /* вертикальное выравнивание */
-    transform: translateY(-50%); /* центрируем кнопку по вертикали */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* анимация появления */
-    opacity: 0; /* начальное состояние невидимо */
-    visibility: hidden; /* начальное состояние скрыто */
+    position: absolute; 
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    opacity: 0; 
+    visibility: hidden;
     border: none;
     background-color: #28a745;
     color: #fff;
@@ -34,6 +34,6 @@
 }
 
 .submit-button.visible {
-    opacity: 1; /* состояние видимости */
-    visibility: visible; /* теперь кнопка видима */
+    opacity: 1; 
+    visibility: visible; 
 }
