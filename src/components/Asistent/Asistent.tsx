@@ -1,5 +1,5 @@
 import './asistent.css';
-// import ChatButton from './ChatButton';
+import ChatButton from './ChatButton';
 import { O } from './halper';
 // import WebSocketClient from '../WSClient';
 import React, { useState } from 'react';
@@ -20,7 +20,7 @@ function Asistent() {
        
          
       {/* </div> */}
-      {/* <ChatButton /> */}
+      <ChatButton />
 
     </div>
   );
